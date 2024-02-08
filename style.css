@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  display: block;
+}
+
+a img {
+  border: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  -moz-appearance: none !important;
+       appearance: none !important;
+  -webkit-appearance: none !important;
+  border-radius: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-text: hsl(0, 0%, 8%);
+  --clr-bg: hsl(0, 0%, 98%);
+  --clr-margin: hsl(0, 0%, 41%);
+  --ff-main: "Epilogue", sans-serif;
+  --ff-size: 18px;
+}/*# sourceMappingURL=style.css.map */

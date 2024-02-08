@@ -11,8 +11,13 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-	
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -27,35 +32,39 @@
     </style>
   </head>
   <body>
-    <header class="header_desktop">
+    <header class="header__desktop">
       <nav>
-        <ol class="nav_list">
-			<li><a href="#"><img src="./images/logo.svg" alt="home"></a>
-			</li>
-          <li><a href="#">
-            Features
-            <span
-              ><img src="./images/icon-arrow-down.svg" alt="down arrow"
-            /></span>
-          </a>
-		</li>
-          <li><a href="#">Company<span
-              ><img src="./images/icon-arrow-down.svg" alt="down arrow"
-            /></span></a>
-		</li>
-          <li><a href="#">Careers</a>
-		</li>
-          <li><a href="#">About</a>
-		</li>
+        <ol class="nav__list">
+          <li>
+            <a href="#"><img src="./images/logo.svg" alt="home" /></a>
+          </li>
+          <li>
+            <a href="#">
+              Features
+              <span
+                ><img src="./images/icon-arrow-down.svg" alt="down arrow"
+              /></span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >Company<span
+                ><img
+                  src="./images/icon-arrow-down.svg"
+                  alt="down arrow" /></span
+            ></a>
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
         </ol>
       </nav>
 
-      <div class="button_container">
+      <div class="button__container">
         <button class="btn login">Login</button>
         <button class="btn register">Register</button>
       </div>
     </header>
-    <header class="header_mobil">
+    <header class="header__mobil">
       <img src="./images/icon-menu.svg" alt="" />
     </header>
 
@@ -83,7 +92,7 @@
         </p>
         <button class="btn more">Learn more</button>
 
-        <div class="logo_container">
+        <div class="logo__container">
           <img src="./images/client-databiz.svg" alt="databiz logo" />
           <img src="./images/client-audiophile.svg" alt="audiophile logo" />
           <img src="./images/client-meet.svg" alt="meet logo" />
