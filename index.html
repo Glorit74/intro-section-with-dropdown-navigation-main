@@ -18,9 +18,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <title>FM | Intro section with dropdown navigation</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -39,16 +38,16 @@
             <a href="#"><img src="./images/logo.svg" alt="home" /></a>
           </li>
           <li>
-            <a href="#">
               Features
+            <a href="#">
               <span
                 ><img src="./images/icon-arrow-down.svg" alt="down arrow"
               /></span>
             </a>
           </li>
-          <li>
+          <li>Company
             <a href="#"
-              >Company<span
+              ><span
                 ><img
                   src="./images/icon-arrow-down.svg"
                   alt="down arrow" /></span
@@ -57,14 +56,17 @@
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
         </ol>
-      </nav>
+      
 
       <div class="button__container">
         <button class="btn login">Login</button>
         <button class="btn register">Register</button>
       </div>
+	  </nav>
     </header>
+
     <header class="header__mobil">
+		 <a href="#"><img src="./images/logo.svg" alt="home" /></a>
       <img src="./images/icon-menu.svg" alt="" />
     </header>
 
@@ -72,19 +74,19 @@
       <picture>
         <source
           media="(max-width: 375px)"
-          srcset="./images/image-product-mobile"
+          srcset="images/image-hero-mobile.png"
         />
         <source
           media="(min-width: 376px)"
-          srcset="./images/image-product-desktop.jpg"
+          srcset="images/image-hero-desktop.png"
         />
         <img
-          src="./images/image-product-mobile.jpg"
+          src="images/image-hero-mobile.png
           alt="Standing man with opened laptop on the hand"
         />
       </picture>
 
-      <div class="container">
+      <article>
         <h1>Make remote work</h1>
         <p>
           Get your team in sync, no matter your location. Streamline processes,
@@ -98,7 +100,7 @@
           <img src="./images/client-meet.svg" alt="meet logo" />
           <img src="./images/client-maker.svg" alt="maker logo" />
         </div>
-      </div>
+      </article>
     </main>
     <footer class="attribution">
       Challenge by

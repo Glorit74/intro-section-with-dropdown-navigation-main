@@ -11,14 +11,7 @@
   box-sizing: border-box;
   background: transparent;
   text-decoration: none;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-}
-
-html,
-body {
-  height: 100%;
-  line-height: 1.5;
 }
 
 p,
@@ -35,7 +28,7 @@ ol,
 ul,
 li {
   list-style: none;
-  display: block;
+  display: block-line;
 }
 
 a img {
@@ -72,20 +65,106 @@ select {
   border-radius: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
 :root {
-  --clr-text: hsl(0, 0%, 8%);
-  --clr-bg: hsl(0, 0%, 98%);
-  --clr-margin: hsl(0, 0%, 41%);
+  --clr-black: hsl(0, 0%, 8%);
+  --clr-white: hsl(0, 0%, 98%);
+  --clr-gray: hsl(0, 0%, 41%);
   --ff-main: "Epilogue", sans-serif;
   --ff-size: 18px;
+}
+
+body {
+  background-color: var(--clr-white);
+  font-family: var(--ff-main);
+  font-size: var(--ff-size);
+  color: var(--clr-black);
+  min-width: 375px;
+  max-width: 1440px;
+}
+
+.header__mobil nav,
+.header__desktop nav {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.header__desktop {
+  display: block;
+}
+.header__desktop nav {
+  display: flex;
+}
+.header__desktop nav ol {
+  display: flex;
+  gap: 15px;
+}
+.header__desktop nav ol li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (max-width: 750px) {
+  .header__desktop {
+    display: none;
+  }
+}
+
+.header__mobil {
+  display: none;
+}
+@media (max-width: 750px) {
+  .header__mobil {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 15px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+@media (min-width: 1440px) {
+  main {
+    flex-direction: row-reverse;
+    margin: 15px;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  line-height: 1.7;
+  padding: 20px;
+}
+
+.btn {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  margin: auto;
+  margin-bottom: 25px;
+  padding: 8px 12px 5px;
+  border-radius: 5px;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: space-between;
+}
+.logo__container img {
+  max-width: 20%;
 }/*# sourceMappingURL=style.css.map */
