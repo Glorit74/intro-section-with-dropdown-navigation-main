@@ -31,21 +31,26 @@
     </style>
   </head>
   <body>
-    <header class="header__desktop">
-      <nav>
-        <ol class="nav__list">
+    <header class="mobile-header flex">
+      <button class="nav-toggle" aria-controls="nav-mobile" aria-expanded="false">
+        <span class="sr-only">Menu</span
+        >
+      </button>
+	  <div class="logo">
+		<a href="#"><img src="./images/logo.svg" alt="home" /></a>
+	  </div>
+      <nav id="nav-mobile" class="nav-mobile flex">
+        <ul class="nav__list" data-visible="false">
           <li>
-            <a href="#"><img src="./images/logo.svg" alt="home" /></a>
-          </li>
-          <li>
-              Features
+            Features
             <a href="#">
               <span
                 ><img src="./images/icon-arrow-down.svg" alt="down arrow"
               /></span>
             </a>
           </li>
-          <li>Company
+          <li>
+            Company
             <a href="#"
               ><span
                 ><img
@@ -55,20 +60,14 @@
           </li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">About</a></li>
-        </ol>
-      
-
+        </ul>
+      </nav>
       <div class="button__container">
         <button class="btn login">Login</button>
         <button class="btn register">Register</button>
       </div>
-	  </nav>
     </header>
 
-    <header class="header__mobil">
-		 <a href="#"><img src="./images/logo.svg" alt="home" /></a>
-      <img src="./images/icon-menu.svg" alt="" />
-    </header>
 
     <main>
       <picture>
@@ -80,10 +79,8 @@
           media="(min-width: 376px)"
           srcset="images/image-hero-desktop.png"
         />
-        <img
-          src="images/image-hero-mobile.png
-          alt="Standing man with opened laptop on the hand"
-        />
+        <img src="images/image-hero-mobile.png alt="Standing man with opened
+        laptop on the hand" />
       </picture>
 
       <article>

@@ -34,7 +34,7 @@ ol,
 ul,
 li {
   list-style: none;
-  display: block-line;
+  display: block;
 }
 
 a img {
@@ -56,14 +56,7 @@ a {
   color: inherit;
 }
 
-textarea {
-  resize: none;
-}
-
-button,
-input,
-textarea,
-select {
+button {
   font-family: inherit;
   appearance: none !important;
   -webkit-appearance: none !important;
@@ -101,28 +94,52 @@ $desktop: 1440px;
 
 body {
   background-color: var(--clr-white);
-
   font-family: var(--ff-main);
   font-size: var(--ff-size);
   color: var(--clr-black);
   min-width: $mobil;
   max-width: $desktop;
+  min-height: 100vh;
+
+  overflow-x: hidden;
 }
 
-.header__mobil,
-.header__desktop {
-  nav {
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px;
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.sr-only {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.mobile-header {
+  align-items: center;
+  margin: 15px;
+
+  .nav-toggle {
+    display: none;
+
+    @include notepad {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      background: url("./images/icon-menu.svg");
+      background-repeat: no-repeat;
+      top: 2rem;
+      right: min(1rem, 10px);
+      width: 1rem;
+      aspect-ratio: 1;
+    }
   }
-}
 
-.header__desktop {
-  display: block;
-  nav {
+  .nav-mobile {
     display: flex;
-    ol {
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    ul {
       display: flex;
       gap: 15px;
 
@@ -130,28 +147,43 @@ body {
         display: flex;
         align-items: center;
         gap: 5px;
+
+        &:hover {
+          font-weight: 600;
+        }
       }
     }
-  }
+    @include notepad {
+	transform: translateX(100%);
+	position: fixed;
+	z-index: 2;
+	inset: 0 0 0 30%;
+	flex-direction: column;
+	background-color: burlywood;
+	padding: min(30vh, 10rem) 2em;
+	
+	.nav-mobile[data-vision="true"] {
+	transform: translateX(0%);
 
-  @include notepad {
-    display: none;
-  }
 }
 
-.header__mobil {
-  display: none;
-  @include notepad {
+    }
+  }
+  .button__container {
+	margin-left: auto;
     display: flex;
-    justify-content: space-between;
-    margin: 30px 15px;
+    gap: 1rem;
+    align-items: center;
+
+    @include notepad {
+      display: none;
+    }
   }
 }
 
 main {
   display: flex;
   flex-direction: column;
-  flex: 1;
 
   @include desktop {
     flex-direction: row-reverse;
@@ -182,7 +214,6 @@ p {
   background-color: var(--clr-black);
   color: var(--clr-white);
   margin: auto;
-  margin-bottom: 25px;
   padding: 8px 12px 5px;
   border-radius: 5px;
 }
@@ -190,6 +221,7 @@ p {
 .logo__container {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
   img {
     max-width: 20%;
   }
