@@ -115,62 +115,65 @@ body {
   height: 0;
 }
 
+.inline {
+  display: inline-block;
+}
+
 .mobile-header {
   align-items: center;
-  margin: 15px;
-
-  .nav-toggle {
-    display: none;
-
-    @include notepad {
-      display: block;
-      position: absolute;
-      z-index: 100;
-      background: url("./images/icon-menu.svg");
-      background-repeat: no-repeat;
-      top: 2rem;
-      right: min(1rem, 10px);
-      width: 1rem;
-      aspect-ratio: 1;
-    }
-  }
+  margin: 2rem;
 
   .nav-mobile {
     display: flex;
-    justify-content: space-between;
-    background-color: cornflowerblue;
-    ul {
-      display: flex;
-      gap: 15px;
+    width: 100%;
 
-      li {
-        display: flex;
-        align-items: center;
-        gap: 5px;
+    .nav-list {
+      --gap: 1rem;
 
-        &:hover {
-          font-weight: 600;
+      @include notepad {
+        position: fixed;
+        inset: 0 0 0 50%;
+        z-index: 10;
+        background-color: var(--clr-white);
+        flex-direction: column;
+        padding: 5rem 2em;
+
+        &[data-visible="false"] {
+          transform: translateX(100%);
+        }
+
+        &[data-visible="true"] {
+          transform: translateX(0%);
         }
       }
+
+      li {
+        --gap: 0.5rem;
+      }
     }
+  }
+
+  .nav-sublist {
+    display: none;
     @include notepad {
-	transform: translateX(100%);
-	position: fixed;
-	z-index: 2;
-	inset: 0 0 0 30%;
-	flex-direction: column;
-	background-color: burlywood;
-	padding: min(30vh, 10rem) 2em;
-	
-	.nav-mobile[data-vision="true"] {
-	transform: translateX(0%);
-
-}
-
+      display: flex;
+      flex-direction: column;
+      #features {
+        &[data-features="false"] {
+          display: none;
+        }
+        &[data-features="true"] {
+          display: reverse;
+        }
+      }
+      --gap: 2rem;
+      ul {
+        padding: 2rem;
+      }
     }
   }
   .button__container {
-	margin-left: auto;
+    margin-left: auto;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -178,6 +181,21 @@ body {
     @include notepad {
       display: none;
     }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  @include notepad {
+    display: block;
+    position: absolute;
+    background-image: url(./images/icon-menu.svg);
+    background-repeat: no-repeat;
+    z-index: 100;
+    width: 2rem;
+    aspect-ratio: 1;
+    right: 1.5rem;
+    top: 2rem;
   }
 }
 

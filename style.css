@@ -88,55 +88,57 @@ body {
   height: 0;
 }
 
+.inline {
+  display: inline-block;
+}
+
 .mobile-header {
   align-items: center;
-  margin: 15px;
-}
-.mobile-header .nav-toggle {
-  display: none;
-}
-@media (max-width: 750px) {
-  .mobile-header .nav-toggle {
-    display: block;
-    position: absolute;
-    z-index: 100;
-    background: url("./images/icon-menu.svg");
-    background-repeat: no-repeat;
-    top: 2rem;
-    right: min(1rem, 10px);
-    width: 1rem;
-    aspect-ratio: 1;
-  }
+  margin: 2rem;
 }
 .mobile-header .nav-mobile {
   display: flex;
-  justify-content: space-between;
-  background-color: cornflowerblue;
+  width: 100%;
 }
-.mobile-header .nav-mobile ul {
-  display: flex;
-  gap: 15px;
-}
-.mobile-header .nav-mobile ul li {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.mobile-header .nav-mobile ul li:hover {
-  font-weight: 600;
+.mobile-header .nav-mobile .nav-list {
+  --gap: 1rem;
 }
 @media (max-width: 750px) {
-  .mobile-header .nav-mobile {
-    transform: translateX(100%);
+  .mobile-header .nav-mobile .nav-list {
     position: fixed;
-    z-index: 2;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 50%;
+    z-index: 10;
+    background-color: var(--clr-white);
     flex-direction: column;
-    background-color: burlywood;
-    padding: min(30vh, 10rem) 2em;
+    padding: 5rem 2em;
   }
-  .mobile-header .nav-mobile .nav-mobile[data-vision=true] {
+  .mobile-header .nav-mobile .nav-list[data-visible=false] {
+    transform: translateX(100%);
+  }
+  .mobile-header .nav-mobile .nav-list[data-visible=true] {
     transform: translateX(0%);
+  }
+}
+.mobile-header .nav-mobile .nav-list li {
+  --gap: 0.5rem;
+}
+.mobile-header .nav-sublist {
+  display: none;
+}
+@media (max-width: 750px) {
+  .mobile-header .nav-sublist {
+    display: flex;
+    flex-direction: column;
+    --gap: 2rem;
+  }
+  .mobile-header .nav-sublist #features[data-features=false] {
+    display: none;
+  }
+  .mobile-header .nav-sublist #features[data-features=true] {
+    display: reverse;
+  }
+  .mobile-header .nav-sublist ul {
+    padding: 2rem;
   }
 }
 .mobile-header .button__container {
@@ -148,6 +150,23 @@ body {
 @media (max-width: 750px) {
   .mobile-header .button__container {
     display: none;
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+@media (max-width: 750px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    background-image: url(./images/icon-menu.svg);
+    background-repeat: no-repeat;
+    z-index: 100;
+    width: 2rem;
+    aspect-ratio: 1;
+    right: 1.5rem;
+    top: 2rem;
   }
 }
 

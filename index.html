@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>FM | Intro section with dropdown navigation</title>
 
     <style>
@@ -30,26 +31,33 @@
       }
     </style>
   </head>
+
   <body>
     <header class="mobile-header flex">
-      <button class="nav-toggle" aria-controls="nav-mobile" aria-expanded="false">
-        <span class="sr-only">Menu</span
-        >
+      <div class="logo">
+        <a href="#"><img src="./images/logo.svg" alt="home" /></a>
+      </div>
+      <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false">
+        <span class="sr-only">Menu</span>
       </button>
-	  <div class="logo">
-		<a href="#"><img src="./images/logo.svg" alt="home" /></a>
-	  </div>
-      <nav id="nav-mobile" class="nav-mobile flex">
-        <ul class="nav__list" data-visible="false">
-          <li>
-            Features
-            <a href="#">
-              <span
-                ><img src="./images/icon-arrow-down.svg" alt="down arrow"
-              /></span>
-            </a>
+      <nav class="nav-mobile flex">
+        <ul class="nav-list flex" data-visible="false">
+          <li class="nav-sublist">
+            <div class="flex">
+				Features
+				<button id="features-btn" aria-controls="features" >
+				  <img src="./images/icon-arrow-down.svg" alt="down arrow"
+				  />
+				</button>
+			</div>
+			<ul class="nav-sublist flex" id="features"  data-features="false">
+			  <li class="flex"><img src="/images/icon-todo.svg" alt="Todo List"><a href="#">List</a></li>
+			  <li class="flex"><img src="/images/icon-calendar.svg" alt="Calendar"><a href="#">Calendar</a></span></li>
+			  <li class="flex"><img src="/images/icon-reminders.svg" alt="Remainders"><a href="#">Remainders</a></li>
+			  <li class="flex"><img src="/images/icon-planning.svg" alt="Planning"><a href="#">Planning</a></li>
+			</ul>
           </li>
-          <li>
+          <li class="flex">
             Company
             <a href="#"
               ><span
@@ -58,16 +66,15 @@
                   alt="down arrow" /></span
             ></a>
           </li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
+          <li class="flex"><a href="#">Careers</a></li>
+          <li class="flex"><a href="#">About</a></li>
         </ul>
+        <div class="button__container">
+          <button class="btn login">Login</button>
+          <button class="btn register">Register</button>
+        </div>
       </nav>
-      <div class="button__container">
-        <button class="btn login">Login</button>
-        <button class="btn register">Register</button>
-      </div>
     </header>
-
 
     <main>
       <picture>
