@@ -162,22 +162,16 @@ body {
     @include notepad {
       display: flex;
       flex-direction: column;
-      #features {
-        &[data-features="false"] {
-          display: none;
-        }
-        &[data-features="true"] {
-          display: reverse;
-        }
-      }
+      #features,
       #company {
-        &[data-company="false"] {
+        &[data-visibility="false"] {
           display: none;
         }
-        &[data-company="true"] {
+        &[data-visibility="true"] {
           display: reverse;
         }
       }
+
       --gap: 2rem;
       ul {
         padding: 2rem;

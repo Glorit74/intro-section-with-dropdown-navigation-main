@@ -135,16 +135,12 @@ body {
     flex-direction: column;
     --gap: 2rem;
   }
-  .mobile-header .nav-sublist #features[data-features=false] {
+  .mobile-header .nav-sublist #features[data-visibility=false],
+  .mobile-header .nav-sublist #company[data-visibility=false] {
     display: none;
   }
-  .mobile-header .nav-sublist #features[data-features=true] {
-    display: reverse;
-  }
-  .mobile-header .nav-sublist #company[data-company=false] {
-    display: none;
-  }
-  .mobile-header .nav-sublist #company[data-company=true] {
+  .mobile-header .nav-sublist #features[data-visibility=true],
+  .mobile-header .nav-sublist #company[data-visibility=true] {
     display: reverse;
   }
   .mobile-header .nav-sublist ul {

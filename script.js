@@ -12,7 +12,8 @@ navToggle.addEventListener("click", () => {
     mobileNav.setAttribute("data-visible", "true");
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.style.backgroundImage = "url(./images/icon-close-menu.svg)";
-    featuresList.setAttribute("data-features", "false");
+    featuresList.setAttribute("data-visibility", "false");
+    companyList.setAttribute("data-visibility", "false");
   } else {
     mobileNav.setAttribute("data-visible", "false");
     navToggle.setAttribute("aria-expanded", "false");
@@ -21,15 +22,23 @@ navToggle.addEventListener("click", () => {
 });
 
 featuresToggle.addEventListener("click", () => {
-  const featureVisibility = featuresList.getAttribute("data-features");
-  if (featureVisibility === "false")
-    featuresList.setAttribute("data-features", "true");
-  else featuresList.setAttribute("data-features", "false");
+  const featureVisibility = featuresList.getAttribute("data-visibility");
+  if (featureVisibility === "false") {
+    featuresList.setAttribute("data-visibility", "true");
+    featuresToggle.style.backgroundImage = "url(./images/icon-arrow-up.svg)";
+  } else {
+    featuresList.setAttribute("data-visibility", "false");
+    featuresToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
+  }
 });
 
 companyToggle.addEventListener("click", () => {
-  const featureVisibility = companyList.getAttribute("data-company");
-  if (featureVisibility === "false")
-    companyList.setAttribute("data-company", "true");
-  else companyList.setAttribute("data-company", "false");
+  const featureVisibility = companyList.getAttribute("data-visibility");
+  if (featureVisibility === "false") {
+    companyList.setAttribute("data-visibility", "true");
+    companyToggle.style.backgroundImage = "url(./images/icon-arrow-up.svg)";
+  } else {
+    companyList.setAttribute("data-visibility", "false");
+    companyToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
+  }
 });
