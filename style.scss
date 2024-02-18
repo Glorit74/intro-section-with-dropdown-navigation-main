@@ -115,6 +115,10 @@ body {
   height: 0;
 }
 
+.invisible {
+  position: absolute;
+}
+
 .inline {
   display: inline-block;
 }
@@ -166,11 +170,31 @@ body {
           display: reverse;
         }
       }
+      #company {
+        &[data-company="false"] {
+          display: none;
+        }
+        &[data-company="true"] {
+          display: reverse;
+        }
+      }
       --gap: 2rem;
       ul {
         padding: 2rem;
       }
+
+      div {
+        align-items: center;
+      }
     }
+  }
+
+  .arrow {
+    background-image: url(./images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
   }
   .button__container {
     margin-left: auto;

@@ -2,6 +2,8 @@ const mobileNav = document.querySelector(".nav-list");
 const navToggle = document.querySelector(".nav-toggle ");
 const featuresList = document.querySelector("#features");
 const featuresToggle = document.querySelector("#features-btn");
+const companyList = document.querySelector("#company");
+const companyToggle = document.querySelector("#company-btn");
 
 navToggle.addEventListener("click", () => {
   const visibility = mobileNav.getAttribute("data-visible");
@@ -23,4 +25,11 @@ featuresToggle.addEventListener("click", () => {
   if (featureVisibility === "false")
     featuresList.setAttribute("data-features", "true");
   else featuresList.setAttribute("data-features", "false");
+});
+
+companyToggle.addEventListener("click", () => {
+  const featureVisibility = companyList.getAttribute("data-company");
+  if (featureVisibility === "false")
+    companyList.setAttribute("data-company", "true");
+  else companyList.setAttribute("data-company", "false");
 });

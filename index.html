@@ -45,26 +45,27 @@
           <li class="nav-sublist">
             <div class="flex">
 				Features
-				<button id="features-btn" aria-controls="features" >
-				  <img src="./images/icon-arrow-down.svg" alt="down arrow"
-				  />
+				<button id="features-btn" aria-controls="features" class="arrow" aria-label="read more">
 				</button>
 			</div>
 			<ul class="nav-sublist flex" id="features"  data-features="false">
-			  <li class="flex"><img src="/images/icon-todo.svg" alt="Todo List"><a href="#">List</a></li>
-			  <li class="flex"><img src="/images/icon-calendar.svg" alt="Calendar"><a href="#">Calendar</a></span></li>
-			  <li class="flex"><img src="/images/icon-reminders.svg" alt="Remainders"><a href="#">Remainders</a></li>
-			  <li class="flex"><img src="/images/icon-planning.svg" alt="Planning"><a href="#">Planning</a></li>
+			  <li class="flex"><img src="/images/icon-todo.svg" aria-hidden="true"><a href="#">List</a></li>
+			  <li class="flex"><img src="/images/icon-calendar.svg" aria-hidden="true"><a href="#">Calendar</a></span></li>
+			  <li class="flex"><img src="/images/icon-reminders.svg" aria-hidden="true"><a href="#">Remainders</a></li>
+			  <li class="flex"><img src="/images/icon-planning.svg" aria-hidden="true"><a href="#">Planning</a></li>
 			</ul>
           </li>
-          <li class="flex">
-            Company
-            <a href="#"
-              ><span
-                ><img
-                  src="./images/icon-arrow-down.svg"
-                  alt="down arrow" /></span
-            ></a>
+          <li class="nav-sublist">
+            <div class="flex">
+				Company
+				<button id="company-btn" aria-controls="company" class="arrow" aria-label="read more"
+				></button>
+			</div>
+			<ul class="nav-sublist flex" id="company" data-company="false">
+				<li><a href="#">History</a></li>
+				<li><a href="#">Our Team</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
           </li>
           <li class="flex"><a href="#">Careers</a></li>
           <li class="flex"><a href="#">About</a></li>

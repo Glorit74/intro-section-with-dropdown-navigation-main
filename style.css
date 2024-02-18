@@ -88,6 +88,10 @@ body {
   height: 0;
 }
 
+.invisible {
+  position: absolute;
+}
+
 .inline {
   display: inline-block;
 }
@@ -137,9 +141,25 @@ body {
   .mobile-header .nav-sublist #features[data-features=true] {
     display: reverse;
   }
+  .mobile-header .nav-sublist #company[data-company=false] {
+    display: none;
+  }
+  .mobile-header .nav-sublist #company[data-company=true] {
+    display: reverse;
+  }
   .mobile-header .nav-sublist ul {
     padding: 2rem;
   }
+  .mobile-header .nav-sublist div {
+    align-items: center;
+  }
+}
+.mobile-header .arrow {
+  background-image: url(./images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2rem;
+  aspect-ratio: 1/1;
 }
 .mobile-header .button__container {
   margin-left: auto;
