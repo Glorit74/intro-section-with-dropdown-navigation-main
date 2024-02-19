@@ -1,5 +1,7 @@
 const mobileNav = document.querySelector(".nav-list");
+const btn_container = document.querySelector(".button-container");
 const navToggle = document.querySelector(".nav-toggle ");
+const btnContainer = document.querySelector(".button-container");
 const featuresList = document.querySelector("#features");
 const featuresToggle = document.querySelector("#features-btn");
 const companyList = document.querySelector("#company");
@@ -7,13 +9,15 @@ const companyToggle = document.querySelector("#company-btn");
 
 navToggle.addEventListener("click", () => {
   const visibility = mobileNav.getAttribute("data-visible");
-  const column = mobileNav.getAttribute("data-column");
   if (visibility === "false") {
     mobileNav.setAttribute("data-visible", "true");
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.style.backgroundImage = "url(./images/icon-close-menu.svg)";
     featuresList.setAttribute("data-visibility", "false");
     companyList.setAttribute("data-visibility", "false");
+    featuresToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
+    companyToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
+	btn_container.setAttribute("data-visibility", "true");
   } else {
     mobileNav.setAttribute("data-visible", "false");
     navToggle.setAttribute("aria-expanded", "false");

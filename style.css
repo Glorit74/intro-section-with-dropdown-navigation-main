@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -106,6 +107,7 @@ body {
 }
 .mobile-header .nav-mobile .nav-list {
   --gap: 1rem;
+  width: 100%;
 }
 @media (max-width: 750px) {
   .mobile-header .nav-mobile .nav-list {
@@ -157,15 +159,31 @@ body {
   width: 2rem;
   aspect-ratio: 1/1;
 }
-.mobile-header .button__container {
+.mobile-header .button-container {
   margin-left: auto;
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 @media (max-width: 750px) {
-  .mobile-header .button__container {
+  .mobile-header .button-container[data-visibility=false] {
     display: none;
+  }
+  .mobile-header .button-container[data-visibility=true] {
+    /*ezt itt meg kell fordítani*/
+    flex-direction: column;
+    margin-left: 0;
+    z-index: 101;
+    width: 50%;
+  }
+  .mobile-header .button-container[data-visibility=true] .btn {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  .mobile-header .button-container[data-visibility=true] .register {
+    border: 1px solid var(--clr-black);
   }
 }
 

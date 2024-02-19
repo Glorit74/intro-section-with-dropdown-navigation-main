@@ -133,6 +133,7 @@ body {
 
     .nav-list {
       --gap: 1rem;
+      width: 100%;
 
       @include notepad {
         position: fixed;
@@ -190,14 +191,34 @@ body {
     width: 2rem;
     aspect-ratio: 1 / 1;
   }
-  .button__container {
+
+  .button-container {
     margin-left: auto;
     display: flex;
     gap: 1rem;
     align-items: center;
 
     @include notepad {
-      display: none;
+      &[data-visibility="false"] {
+        display: none;
+      }
+      &[data-visibility="true"] {
+        /*ezt itt meg kell fordítani*/
+        flex-direction: column;
+        margin-left: 0;
+        z-index: 101;
+        width: 50%;
+        .btn {
+          background-color: var(--clr-white);
+          color: var(--clr-black);
+          font-size: 1.1rem;
+          width: 100%;
+        }
+
+        .register {
+          border: 1px solid var(--clr-black);
+        }
+      }
     }
   }
 }
