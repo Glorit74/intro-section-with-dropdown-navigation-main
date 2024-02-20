@@ -37,10 +37,7 @@ a img {
 }
 
 img,
-picture,
-video,
-canvas,
-svg {
+picture {
   max-width: 100%;
   display: block;
 }
@@ -374,21 +371,12 @@ footer {
   @include desktop {
     position: absolute;
     display: block;
-    right: -50px;
-    top: 200px;
-
-    --s: 60px; /* control the size */
-
-    --_s: 0 0 / var(--s) var(--s);
-    background: radial-gradient(
-          #3097a9 50%,
-          rgba(0, 0, 0, 0.1333333333) 54%,
-          var(--clr-gray-light) 57%
-        )
-        var(--_s),
-      var(--_s), #3097a9 0 0 / calc(2 * var(--s)) calc(2 * var(--s));
+    transform: translateX(-102%);
+    top: 50%;
+    background-image: url(./images/icon-circle.svg);
     background-repeat: round;
-    width: 300px;
-    height: 300px;
+    background-size: 32px;
+    width: 500px;
+    height: 160px;
   }
 }

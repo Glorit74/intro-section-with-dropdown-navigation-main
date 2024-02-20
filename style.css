@@ -36,10 +36,7 @@ a img {
 }
 
 img,
-picture,
-video,
-canvas,
-svg {
+picture {
   max-width: 100%;
   display: block;
 }
@@ -366,11 +363,12 @@ p {
   .dots {
     position: absolute;
     display: block;
-    --s: 60px; /* control the size */
-    --_s: 0 0 / var(--s) var(--s);
-    background: radial-gradient(#3097a9 50%, #3097a9 54%, var(--clr-gray-light) 57%) var(--_s), var(--_s), var(--clr-gray-light) 57% 0 0/calc(2 * var(--s)) calc(2 * var(--s));
+    transform: translateX(-102%);
+    top: 50%;
+    background-image: url(./images/icon-circle.svg);
     background-repeat: round;
-    width: 300px;
-    height: 300px;
+    background-size: 32px;
+    width: 500px;
+    height: 160px;
   }
 }/*# sourceMappingURL=style.css.map */
