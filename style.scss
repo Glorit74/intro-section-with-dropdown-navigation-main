@@ -128,6 +128,15 @@ body {
   @include desktop {
     margin-top: 2.6rem;
   }
+  .snap_logo {
+    margin-right: 0;
+    @include notepad {
+      margin-right: 1.5rem;
+    }
+    @include desktop {
+      margin-right: 3rem;
+    }
+  }
 
   nav {
     width: 100%;
@@ -152,7 +161,7 @@ body {
       flex-direction: column;
       align-items: flex-start;
       padding: 5rem var(--padding);
-
+      gap: 1.2rem;
       &[data-visible="false"] {
         transform: translateX(100%);
       }
@@ -160,6 +169,9 @@ body {
       &[data-visible="true"] {
         transform: translateX(0%);
       }
+    }
+    @include desktop {
+      gap: 4rem;
     }
   }
 
@@ -205,6 +217,17 @@ body {
     }
   }
 
+  li {
+	 &:hover {
+      color: var(--clr-black);
+	  font-weight: 600;
+    }
+	li {
+		color: var(--clr-gray);
+		font-weight: 400;
+	}
+  }
+  
   li[class="nav-sublist"] {
     div {
       gap: 0.2rem;
