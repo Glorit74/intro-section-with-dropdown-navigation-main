@@ -33,85 +33,92 @@
   </head>
 
   <body>
-    <header class="mobile-header flex">
-      <div class="logo">
-        <a href="#"><img src="./images/logo.svg" alt="home" /></a>
-      </div>
-      <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
-      <nav class="nav-mobile flex">
-        <ul class="nav-list flex" data-visible="false">
-          <li class="nav-sublist">
-            <div class="flex">
-				Features
-				<button id="features-btn" aria-controls="features" class="arrow" aria-label="read more">
-				</button>
-			</div>
-			<ul class="nav-sublist flex" id="features"  data-visibility="false">
-			  <li class="flex"><img src="/images/icon-todo.svg" aria-hidden="true"><a href="#">List</a></li>
-			  <li class="flex"><img src="/images/icon-calendar.svg" aria-hidden="true"><a href="#">Calendar</a></span></li>
-			  <li class="flex"><img src="/images/icon-reminders.svg" aria-hidden="true"><a href="#">Remainders</a></li>
-			  <li class="flex"><img src="/images/icon-planning.svg" aria-hidden="true"><a href="#">Planning</a></li>
-			</ul>
-          </li>
-          <li class="nav-sublist">
-            <div class="flex">
-				Company
-				<button id="company-btn" aria-controls="company" class="arrow" aria-label="read more"
-				></button>
-			</div>
-			<ul class="nav-sublist flex" id="company" data-visibility="false">
-				<li><a href="#">History</a></li>
-				<li><a href="#">Our Team</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-          </li>
-          <li class="flex"><a href="#">Careers</a></li>
-          <li class="flex"><a href="#">About</a></li>
-		  <div class="button-container" data-visibility="false">
-			<button class="btn login">Login</button>
-			<button class="btn register">Register</button>
+	  <div class="envelop">
+		<div class="curve"><svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+	  <circle cx="300" cy="300" fill="none"
+		r="269" stroke-width="27" stroke="#3097a9"
+		stroke-dasharray="850 1400"
+		stroke-linecap="round"
+		stroke-dashoffset="-851" />
+	</svg></div>
+	<div class="dots">kacsa</div>
+		<header class="mobile-header flex">
+		  <div class="logo">
+			<a href="#"><img src="./images/logo.svg" alt="home" /></a>
 		  </div>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <picture>
-        <source
-          media="(max-width: 375px)"
-          srcset="images/image-hero-mobile.png"
-        />
-        <source
-          media="(min-width: 376px)"
-          srcset="images/image-hero-desktop.png"
-        />
-        <img src="images/image-hero-mobile.png alt="Standing man with opened
-        laptop on the hand" />
-      </picture>
-
-      <article>
-        <h1>Make remote work</h1>
-        <p>
-          Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.
-        </p>
-        <button class="btn more">Learn more</button>
-
-        <div class="logo__container">
-          <img src="./images/client-databiz.svg" alt="databiz logo" />
-          <img src="./images/client-audiophile.svg" alt="audiophile logo" />
-          <img src="./images/client-meet.svg" alt="meet logo" />
-          <img src="./images/client-maker.svg" alt="maker logo" />
-        </div>
-      </article>
-    </main>
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </footer>
+		  <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false">
+			<span class="sr-only">Menu</span>
+		  </button>
+		  <nav>
+			<ul class="nav-list flex" data-visible="false">
+			  <li class="nav-sublist">
+				<div class="flex">
+						Features
+						<button id="features-btn" aria-controls="features" class="arrow" aria-label="read more">
+						</button>
+					</div>
+					<ul class="nav-sublist flex" id="features"  data-visibility="false">
+					  <li class="flex"><img src="/images/icon-todo.svg" aria-hidden="true"><a href="#">Todo List</a></li>
+					  <li class="flex"><img src="/images/icon-calendar.svg" aria-hidden="true"><a href="#">Calendar</a></span></li>
+					  <li class="flex"><img src="/images/icon-reminders.svg" aria-hidden="true"><a href="#">Remainders</a></li>
+					  <li class="flex"><img src="/images/icon-planning.svg" aria-hidden="true"><a href="#">Planning</a></li>
+					</ul>
+			  </li>
+			  <li class="nav-sublist">
+				<div class="flex">
+						Company
+						<button id="company-btn" aria-controls="company" class="arrow" aria-label="read more"
+						></button>
+					</div>
+					<ul class="nav-sublist flex" id="company" data-visibility="false">
+						<li class="flex"><a href="#">History</a></li>
+						<li class="flex"><a href="#">Our Team</a></li>
+						<li class="flex"><a href="#">Blog</a></li>
+					</ul>
+			  </li>
+			  <li class="flex"><a href="#">Careers</a></li>
+			  <li class="flex"><a href="#">About</a></li>
+				  <div class="button-container" data-visibility="false">
+					<button class="btn login">Login</button>
+					<button class="btn register">Register</button>
+				  </div>
+			</ul>
+		  </nav>
+		</header>
+		<main>
+		  <picture>
+			<source
+			  media="(max-width: 375px)"
+			  srcset="images/image-hero-mobile.png"
+			/>
+			<source
+			  media="(min-width: 376px)"
+			  srcset="images/image-hero-desktop.png"
+			/>
+			<img src="images/image-hero-mobile.png alt="Standing man with opened
+			laptop on the hand" />
+		  </picture>
+		  <article>
+			<h1>Make remote&nbsp;work</h1>
+			<p>
+			  Get your team in sync, no matter your location. Streamline processes,
+			  create team rituals, and watch productivity soar.
+			</p>
+			<button class="btn more">Learn more</button>
+			<div class="logo-container">
+			  <div class="logo"><img src="./images/client-databiz.svg" alt="databiz logo" /></div>
+			  <div class="logo"><img src="./images/client-audiophile.svg" alt="audiophile logo" /></div>
+			  <div class="logo"><img src="./images/client-meet.svg" alt="meet logo" /></div>
+			  <div class="logo"><img src="./images/client-maker.svg" alt="maker logo" /></div>
+			</div>
+		  </article>
+		</main>
+	</div>
+	<footer class="attribution">
+	  Challenge by
+	  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+		>Frontend Mentor</a
+	  >. Coded by <a href="#">Your Name Here</a>.
+	</footer>
   </body>
 </html>
