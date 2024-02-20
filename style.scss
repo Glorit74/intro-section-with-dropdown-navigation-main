@@ -354,23 +354,36 @@ footer {
   }
 }
 
-.curve {
+.svg {
   display: none;
   @include desktop {
     position: absolute;
     display: block;
+  }
+}
+
+.curve {
+  @include desktop {
     top: -203px;
     left: -150px;
     width: 500px;
   }
 }
 
-.dots {
-  display: none;
-
+.lines {
   @include desktop {
-    position: absolute;
-    display: block;
+    top: -90px;
+    right: 40%;
+    background-image: url(./images/icon-parallel.svg);
+    background-size: 100px;
+    background-repeat: round;
+
+    width: 150px;
+    height: 100px;
+  }
+}
+.dots {
+  @include desktop {
     transform: translateX(-102%);
     top: 50%;
     background-image: url(./images/icon-circle.svg);
@@ -378,5 +391,17 @@ footer {
     background-size: 32px;
     width: 500px;
     height: 160px;
+  }
+}
+
+.wave {
+  @include desktop {
+    bottom: -90px;
+    left: calc(100% - 350px);
+    background-image: url(./images/icon-line.svg);
+    background-repeat: round;
+    background-size: 80px;
+    width: 400px;
+    height: 80px;
   }
 }

@@ -343,26 +343,38 @@ p {
   }
 }
 
-.curve {
+.svg {
   display: none;
 }
 @media (min-width: 1440px) {
-  .curve {
+  .svg {
     position: absolute;
     display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .curve {
     top: -203px;
     left: -150px;
     width: 500px;
   }
 }
 
-.dots {
-  display: none;
+@media (min-width: 1440px) {
+  .lines {
+    top: -90px;
+    right: 40%;
+    background-image: url(./images/icon-parallel.svg);
+    background-size: 100px;
+    background-repeat: round;
+    width: 150px;
+    height: 100px;
+  }
 }
+
 @media (min-width: 1440px) {
   .dots {
-    position: absolute;
-    display: block;
     transform: translateX(-102%);
     top: 50%;
     background-image: url(./images/icon-circle.svg);
@@ -370,5 +382,17 @@ p {
     background-size: 32px;
     width: 500px;
     height: 160px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wave {
+    bottom: -90px;
+    left: calc(100% - 350px);
+    background-image: url(./images/icon-line.svg);
+    background-repeat: round;
+    background-size: 80px;
+    width: 400px;
+    height: 80px;
   }
 }/*# sourceMappingURL=style.css.map */
