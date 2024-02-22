@@ -185,9 +185,11 @@ body {
       flex-direction: column;
       align-items: flex-start;
       background-color: var(--clr-white);
-      padding: 2rem;
+      padding: 1rem;
+      gap: 1.2rem;
       box-shadow: 5px 5px 70px -20px var(--clr-gray);
       border-radius: 10px;
+      margin-top: 0;
     }
     @include notepad {
       display: flex;
@@ -199,35 +201,43 @@ body {
         }
         &[data-visibility="true"] {
           position: relative;
-          background-color: none;
           box-shadow: none;
+          transform: translateX(0%);
           li:last-of-type {
             margin-bottom: -var(--padding);
           }
         }
       }
+      #features {
+        @include notepad {
+          transform: translateX(-60%);
+        }
+      }
       ul {
         padding: var(--padding);
         align-items: flex-start;
-        gap: 1.3rem;
+        gap: 1.2rem;
         img {
           margin-right: 10px;
         }
       }
     }
+    @include notepad {
+      gap: 0.1rem;
+      margin-top: 10px;
+    }
+  }
+  li {
+    &:hover {
+      color: var(--clr-black);
+      font-weight: 600;
+    }
+    li {
+      color: var(--clr-gray);
+      font-weight: 400;
+    }
   }
 
-  li {
-	 &:hover {
-      color: var(--clr-black);
-	  font-weight: 600;
-    }
-	li {
-		color: var(--clr-gray);
-		font-weight: 400;
-	}
-  }
-  
   li[class="nav-sublist"] {
     div {
       gap: 0.2rem;
@@ -296,6 +306,9 @@ main {
 
 picture {
   margin: auto;
+  @include notepad {
+    width: 80%;
+  }
 }
 
 article {
@@ -327,10 +340,14 @@ h1 {
 
 p {
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.5;
   padding-top: 20px;
-  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+
   @include desktop {
+    font-weight: 600;
+    line-height: 1.7;
     text-align: left;
     padding-right: 150px;
     padding-top: 0;
@@ -352,6 +369,12 @@ p {
   color: var(--clr-white);
   @include desktop {
     padding: 15px 20px 13px;
+
+    &::hover {
+      background-color: var(--clr-white);
+      color: var(--clr-gray);
+      border: 2px solid var(--clr-gray);
+    }
   }
 }
 
@@ -399,8 +422,8 @@ footer {
     right: 40%;
     background-image: url(./images/icon-parallel.svg);
     background-size: 100px;
-    background-repeat: round;
-
+    background-repeat: space;
+    /*Kevin --gap? */
     width: 150px;
     height: 100px;
   }

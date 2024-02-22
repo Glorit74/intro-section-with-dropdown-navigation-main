@@ -170,9 +170,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
   background-color: var(--clr-white);
-  padding: 2rem;
+  padding: 1rem;
+  gap: 1.2rem;
   box-shadow: 5px 5px 70px -20px var(--clr-gray);
   border-radius: 10px;
+  margin-top: 0;
 }
 @media (max-width: 750px) {
   .mobile-header .nav-sublist {
@@ -186,20 +188,33 @@ body {
   .mobile-header .nav-sublist #features[data-visibility=true],
   .mobile-header .nav-sublist #company[data-visibility=true] {
     position: relative;
-    background-color: none;
     box-shadow: none;
+    transform: translateX(0%);
   }
   .mobile-header .nav-sublist #features[data-visibility=true] li:last-of-type,
   .mobile-header .nav-sublist #company[data-visibility=true] li:last-of-type {
     margin-bottom: -var(--padding);
   }
+}
+@media (max-width: 750px) and (max-width: 750px) {
+  .mobile-header .nav-sublist #features {
+    transform: translateX(-60%);
+  }
+}
+@media (max-width: 750px) {
   .mobile-header .nav-sublist ul {
     padding: var(--padding);
     align-items: flex-start;
-    gap: 1.3rem;
+    gap: 1.2rem;
   }
   .mobile-header .nav-sublist ul img {
     margin-right: 10px;
+  }
+}
+@media (max-width: 750px) {
+  .mobile-header .nav-sublist {
+    gap: 0.1rem;
+    margin-top: 10px;
   }
 }
 .mobile-header li:hover {
@@ -279,6 +294,11 @@ main {
 picture {
   margin: auto;
 }
+@media (max-width: 750px) {
+  picture {
+    width: 80%;
+  }
+}
 
 article {
   display: flex;
@@ -313,12 +333,15 @@ h1 {
 
 p {
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.5;
   padding-top: 20px;
-  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 @media (min-width: 1440px) {
   p {
+    font-weight: 600;
+    line-height: 1.7;
     text-align: left;
     padding-right: 150px;
     padding-top: 0;
@@ -344,6 +367,11 @@ p {
 @media (min-width: 1440px) {
   .more {
     padding: 15px 20px 13px;
+  }
+  .more::hover {
+    background-color: var(--clr-white);
+    color: var(--clr-gray);
+    border: 2px solid var(--clr-gray);
   }
 }
 
@@ -394,7 +422,8 @@ p {
     right: 40%;
     background-image: url(./images/icon-parallel.svg);
     background-size: 100px;
-    background-repeat: round;
+    background-repeat: space;
+    /*Kevin --gap? */
     width: 150px;
     height: 100px;
   }
