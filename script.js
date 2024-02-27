@@ -17,7 +17,7 @@ navToggle.addEventListener("click", () => {
     companyList.setAttribute("data-visibility", "false");
     featuresToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
     companyToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
-	btn_container.setAttribute("data-visibility", "true");
+    btn_container.setAttribute("data-visibility", "true");
   } else {
     mobileNav.setAttribute("data-visible", "false");
     navToggle.setAttribute("aria-expanded", "false");
@@ -27,12 +27,16 @@ navToggle.addEventListener("click", () => {
 
 featuresToggle.addEventListener("click", () => {
   const featureVisibility = featuresList.getAttribute("data-visibility");
+  const featuresArialLabel = featuresToggle.getAttribute("arial-label");
+  console.log(featuresArialLabel);
   if (featureVisibility === "false") {
     featuresList.setAttribute("data-visibility", "true");
     featuresToggle.style.backgroundImage = "url(./images/icon-arrow-up.svg)";
+    featuresToggle.setAttribute("arial-label", "close");
   } else {
     featuresList.setAttribute("data-visibility", "false");
     featuresToggle.style.backgroundImage = "url(./images/icon-arrow-down.svg)";
+    featuresToggle.setAttribute("arial-label", "read more");
   }
 });
 

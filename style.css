@@ -82,6 +82,7 @@ body {
 
 .envelop {
   position: relative;
+  overflow: hidden;
   background-color: var(--clr-white);
 }
 @media (min-width: 1440px) {
@@ -283,11 +284,19 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  width: 75vw;
+  margin: 0 auto;
+}
+@media (max-width: 750px) {
+  main {
+    width: 80vw;
+  }
 }
 @media (min-width: 1440px) {
   main {
     flex-direction: row-reverse;
-    margin: 15px;
+    padding: 15px;
+    width: 100%;
   }
 }
 

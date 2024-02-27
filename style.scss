@@ -103,6 +103,7 @@ body {
 
 .envelop {
   position: relative;
+  overflow: hidden;
   background-color: var(--clr-white);
   @include desktop {
     box-shadow: 8px 8px 20px -10px var(--clr-black);
@@ -297,10 +298,15 @@ body {
 main {
   display: flex;
   flex-direction: column;
-
+  width: 75vw;
+  margin: 0 auto;
+  @include notepad {
+    width: 80vw;
+  }
   @include desktop {
     flex-direction: row-reverse;
-    margin: 15px;
+    padding: 15px;
+	width: 100%;
   }
 }
 
